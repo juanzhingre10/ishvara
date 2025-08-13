@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Artist Portfolio — Music &amp; Film Photography&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Titles: Playfair Display, Body: Inter, Accent: Caveat (handwritten) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&amp;family=Inter:wght@300;400;500;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg: #f3efe7; <span class="Apple-converted-space">        </span>/* paper beige */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ink: #1e1c1a;<span class="Apple-converted-space">        </span>/* warm near-black */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted: #6b6a66;<span class="Apple-converted-space">      </span>/* muted gray */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent: #7a8b7a; <span class="Apple-converted-space">    </span>/* muted green */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--link: #5c6f92; <span class="Apple-converted-space">      </span>/* slate blue */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--photo-edge: rgba(0,0,0,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Section-tinted backgrounds (set via body classes) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body.at-hero { --bg: #f3efe7; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body.at-music { --bg: #f6f3ec; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body.at-photos { --bg: #f2f4f1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body.at-about { --bg: #f4f1f6; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>html { scroll-behavior: smooth; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 500ms ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Subtle paper texture using layered gradients */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; inset: 0; pointer-events: none; z-index: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(100px 100px at 10% 10%, rgba(0,0,0,0.03), transparent 70%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(120px 80px at 80% 20%, rgba(0,0,0,0.02), transparent 70%),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(80px 120px at 30% 90%, rgba(0,0,0,0.02), transparent 70%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>mix-blend-mode: multiply;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container { width: min(1100px, 92vw); margin: 0 auto; position: relative; z-index: 1; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* NAV */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; top: 18px; right: 22px; z-index: 10;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; gap: 18px; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 500; letter-spacing: 0.2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.4); backdrop-filter: blur(6px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(0,0,0,0.06); border-radius: 999px; padding: 8px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 8px 24px rgba(0,0,0,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none; color: var(--ink); opacity: 0.85;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 6px 10px; border-radius: 999px; transition: 180ms ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav a:hover { background: rgba(0,0,0,0.06); opacity: 1; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* HERO */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 92vh; display: grid; place-items: center; position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10vh 0 8vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(rgba(40,39,35,0.22), rgba(40,39,35,0.22)),</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&amp;w=1920&amp;auto=format&amp;fit=crop');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-size: cover; background-position: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero .title { font-family: 'Playfair Display', serif; font-size: clamp(38px, 6vw, 86px); line-height: 1.05; margin: 0 0 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero .subtitle { font-size: clamp(14px, 2vw, 18px); opacity: 0.95; letter-spacing: 1px; text-transform: lowercase; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero .hand {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Caveat', cursive; font-size: clamp(18px, 3.2vw, 28px); margin-top: 14px; opacity: 0.95;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.scrollhint { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); font-size: 13px; opacity: 0.85; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* SECTION SHELL */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section { padding: 96px 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section .section-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Playfair Display', serif; font-weight: 600; font-size: clamp(28px, 3.6vw, 46px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 0 22px; letter-spacing: 0.2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-note { font-family: 'Caveat', cursive; font-size: 22px; color: var(--muted); margin-bottom: 28px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* MUSIC */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.music {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1.05fr 1fr; gap: 36px; align-items: start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 900px) { .music { grid-template-columns: 1fr; } }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tracklist {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 18px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 30px rgba(0,0,0,0.06);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.track { display: grid; grid-template-columns: 22px 1fr auto; gap: 12px; align-items: center; padding: 10px 8px; border-radius: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.track:hover { background: rgba(0,0,0,0.035); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.track .dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.track .name { font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.track .mood { color: var(--muted); font-size: 12px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 24px 60px rgba(0,0,0,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover img { display: block; width: 100%; height: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cover figcaption {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; inset: auto 0 0 0; padding: 14px 16px; color: #fff; backdrop-filter: blur(2px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient( to top, rgba(0,0,0,0.55), transparent ); font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.player {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 16px; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff; box-shadow: 0 10px 26px rgba(0,0,0,0.06);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.player iframe { display: block; width: 100%; height: 166px; border: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* PHOTOS */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; gap: 14px; grid-template-columns: repeat(12, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid .ph { position: relative; overflow: hidden; border-radius: 14px; background: #e9e7e2; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 12px 26px var(--photo-edge); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms ease; display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid .ph:hover img { transform: scale(1.06); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid .ph figcaption { position: absolute; inset: auto 10px 10px 10px; background: rgba(0,0,0,0.45); color: #fff; padding: 8px 10px; border-radius: 8px; opacity: 0; transition: 220ms ease; font-family: 'Caveat', cursive; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid .ph:hover figcaption { opacity: 1; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Masonry-like spans */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.c4 { grid-column: span 4; height: 240px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.c6 { grid-column: span 6; height: 280px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.c8 { grid-column: span 8; height: 320px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tall { height: 380px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 900px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.grid { grid-template-columns: repeat(6, 1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.c8 { grid-column: span 6; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.c6 { grid-column: span 6; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.c4 { grid-column: span 3; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.tall { height: 300px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 560px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.grid { grid-template-columns: repeat(2, 1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.c8, .c6, .c4 { grid-column: span 2; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.tall { height: 220px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ABOUT */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.about {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 36px; align-items: start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 900px) { .about { grid-template-columns: 1fr; } }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.portrait { aspect-ratio: 4/5; border-radius: 18px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 24px 60px rgba(0,0,0,0.12); background: #e8e6e0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.bio { background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 20px; box-shadow: 0 12px 30px rgba(0,0,0,0.06); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.bio p { margin-top: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.timeline { list-style: none; padding: 0; margin: 12px 0 0; color: var(--muted); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.timeline li { padding: 6px 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.signature { font-family: 'Caveat', cursive; font-size: 28px; margin-top: 12px; color: var(--ink); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Footer */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer { padding: 46px 0 60px; text-align: center; color: var(--muted); font-size: 14px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Custom cursor follower */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cursor-dot {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; top: 0; left: 0; width: 10px; height: 10px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent); opacity: 0.9; transform: translate(-50%, -50%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none; z-index: 9999; transition: width 160ms ease, height 160ms ease, opacity 160ms ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>mix-blend-mode: multiply;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a:hover ~ .cursor-dot, .track:hover ~ .cursor-dot { width: 14px; height: 14px; opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="at-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;nav class="nav" aria-label="Primary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#music"&gt;Music&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#photos"&gt;Photos&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header id="home" class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 class="title"&gt;Your Name&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subtitle"&gt;music &amp; film photography&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hand"&gt;stories in sound + light&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="scrollhint"&gt;scroll ↓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="music"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Music&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-note"&gt;slow mornings, late-night rooftops&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="music"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tracklist"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="name"&gt;Sunday Rain on Rooftops&lt;/div&gt;&lt;div class="mood"&gt;ambient / mellow&lt;/div&gt;&lt;/div&gt;&lt;div&gt;3:18&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="name"&gt;Neon Reflections&lt;/div&gt;&lt;div class="mood"&gt;lofi / night drive&lt;/div&gt;&lt;/div&gt;&lt;div&gt;2:47&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="name"&gt;Sidewalk Constellations&lt;/div&gt;&lt;div class="mood"&gt;minimal / warm&lt;/div&gt;&lt;/div&gt;&lt;div&gt;4:01&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="track"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="name"&gt;Quiet Rooftops&lt;/div&gt;&lt;div class="mood"&gt;cinematic / soft&lt;/div&gt;&lt;/div&gt;&lt;div&gt;3:36&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;figure class="cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Album cover mood" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;figcaption&gt;"City hum in slow motion" — EP cover&lt;/figcaption&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Replace with your Bandcamp or SoundCloud embed --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;iframe title="SoundCloud Player" scrolling="no" frameborder="no"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;color=%23a0a0a0&amp;inverse=false&amp;auto_play=false&amp;show_user=true"&gt;&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="photos"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Photos&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-note"&gt;35mm streets &amp; landscapes&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;figure class="ph c8 tall"&gt;&lt;img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt=""/&gt;&lt;figcaption&gt;corner of 8th &amp;amp; forgotten&lt;/figcaption&gt;&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;figure class="ph c4"&gt;&lt;img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt=""/&gt;&lt;figcaption&gt;window light, 4pm&lt;/figcaption&gt;&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;figure class="ph c6"&gt;&lt;img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&amp;w=1400&amp;auto=format&amp;fit=crop" alt=""/&gt;&lt;figcaption&gt;desert line&lt;/figcaption&gt;&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;figure class="ph c6 tall"&gt;&lt;img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&amp;w=1400&amp;auto=format&amp;fit=crop" alt=""/&gt;&lt;figcaption&gt;neon rain&lt;/figcaption&gt;&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;figure class="ph c4"&gt;&lt;img src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt=""/&gt;&lt;figcaption&gt;rooftop hush&lt;/figcaption&gt;&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;figure class="ph c8"&gt;&lt;img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt=""/&gt;&lt;figcaption&gt;coastline haze&lt;/figcaption&gt;&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;About&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-note"&gt;hi, i'm [your name] — i make songs &amp; shoot film&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="portrait"&gt;&lt;img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Portrait"/&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bio"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;I shoot the moments most people walk past—cracked sidewalks, neon reflections, quiet rooftops. My music leans ambient and lofi; the photos are mostly 35mm. Together they’re a little zine of the places I call home.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul class="timeline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;📷 2019 — first thrifted SLR (Canon AE-1)&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;🎵 2022 — released first EP, &lt;em&gt;Sidewalk Constellations&lt;/em&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;🗺️ 2024 — desert road trip series&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;🎧 2025 — scoring a short film&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="signature"&gt;— your name&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;© &lt;span id="year"&gt;&lt;/span&gt; Your Name — all images &amp; audio by me&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="cursor-dot" aria-hidden="true"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Year</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('year').textContent = new Date().getFullYear();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Body tint by section in view</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sections = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'home', cls: 'at-hero' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'music', cls: 'at-music' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'photos', cls: 'at-photos' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{ id: 'about', cls: 'at-about' },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const io = new IntersectionObserver(entries =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>entries.forEach(e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (e.isIntersecting) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.body.className = sections.find(s =&gt; s.id === e.target.id)?.cls || '';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, { threshold: 0.5 });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sections.forEach(s =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const el = document.getElementById(s.id);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (el) io.observe(el);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Simple cursor follower</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dot = document.querySelector('.cursor-dot');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let x = window.innerWidth / 2, y = window.innerHeight / 2;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let tx = x, ty = y;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const speed = 0.18;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function animate(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>x += (tx - x) * speed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>y += (ty - y) * speed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dot.style.transform = `translate(${x}px, ${y}px)`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>requestAnimationFrame(animate);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.addEventListener('mousemove', (e)=&gt;{ tx = e.clientX; ty = e.clientY; });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animate();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
